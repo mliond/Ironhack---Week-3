@@ -1,0 +1,70 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+.top-nav {
+	background-color: #FFFFFF;
+	padding: 20px 0;
+	display: flex;
+	align-items: center;
+}
+
+.top-nav .google-logo {
+	height: 33px;
+	width: 92px;
+}
+
+.top-nav .user-options, .second-nav .user-options {
+	display: flex;
+	align-items: center; 
+	justify-content: space-around;
+}
+
+.top-nav .userpic {
+	height: 30px;
+}
+
+.second-nav {
+	padding: 20px 0;
+	background-color: #FAFAFA;
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 5px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 5px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.second-nav .border-right {
+	border-right: 1px solid grey;
+}
+
+.second-nav .gdrive-logo {
+	height: 33px;
+}
+
+.main-content {
+	padding: 20px 0;
+	background-color: #EEEEEE;
+}
+
+.sidebar {
+}
+
+.sidebar .empty-space {
+	padding: 30%;
+}
+
+.sidebar button {
+	padding: 0 15px;
+}
+
+.sidebar .empty-space {
+}
+
+.content button {
+  border-radius: 0;
+  background-color: lightgrey;
+  border: 1px;
+}
