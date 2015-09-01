@@ -4,6 +4,7 @@ html {
 
 body {
 	height: 100%;
+	background-color: #EEEEEE;
 }
 
 .top-nav {
@@ -14,8 +15,20 @@ body {
 }
 
 .top-nav .google-logo {
+	padding-left: 10px;
 	height: 33px;
 	width: 92px;
+}
+
+.top-nav .search-icon {
+	background-color: #4387FC;
+	padding: 7px 20px 7px 20px;
+	border-radius: 3px;
+	border: 0;
+}
+
+.top-nav p.username {
+	color: #555;
 }
 
 .top-nav .user-options, .second-nav .user-options {
@@ -29,20 +42,49 @@ body {
 }
 
 .second-nav {
-	padding: 20px 0;
+	padding: 10px 0;
 	background-color: #FAFAFA;
+	z-index: 1;
+	position: relative;
 	-webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.75);
 	-moz-box-shadow:    0px 5px 5px 0px rgba(50, 50, 50, 0.75);
-	box-shadow:         0px 5px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 3px 3px 0px rgba(50, 50, 50, 0.47);
+	border-top: 1px solid lightgrey;
+	height: 55px;
 }
 
 .second-nav .border-right {
 	border-right: 1px solid grey;
 }
 
+.second-nav .gdrive-logo-box, .second-nav .folder-structure-box {
+	display: flex;
+	align-items: center; 
+}
+
 .second-nav .gdrive-logo {
 	height: 33px;
+	padding-left: 5px;
+	font-family: Roboto,sans-serif;
+	color: #555;
+  font-size: 20px;
+  line-height: 32px;
 }
+
+.second-nav .folder-structure-box {
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.folder-structure-box .folder-two {
+	border: 0;
+	background-color: white;
+	font-size: 16px;
+	line-height: 30px;
+	margin: 0;
+	padding: 0 0 0 10px;
+}
+
 
 .main-content {
 	padding: 20px 0;
@@ -50,21 +92,50 @@ body {
 }
 
 .sidebar {
+	padding-left: 5px;
+	border-right: 1px solid lightgrey;
 }
 
 .sidebar .empty-space {
-	padding: 30%;
+	height: 100px;
 }
 
-.sidebar button {
-	padding: 0 15px;
+.sidebar .new-button {
+	padding: 0 40px;
+	border-radius: 2px;
+	margin: 0 0 0 10px;
 }
 
-.sidebar .empty-space {
+.sidebar a {
+	margin-top: 10px;
+	color: #777;
 }
 
-.content button {
-  border-radius: 0;
-  background-color: lightgrey;
-  border: 1px;
+.sidebar hr {
+	border-color: lightgrey;
+}
+
+.sidebar .get-drive-button {
+	background-color: #E1E1E1;
+	border: 0;
+	padding: 10px 15px;
+}
+
+.content .folder-button {
+	border-radius: 1px;
+	border: 1px;
+	padding: 0;
+	height: 42px;
+	margin: 0 10px 10px 0;
+
+}
+
+.folder-button .folder-icon {
+	background-color: #FAFAFA;
+	padding: 11px 12px;
+}
+
+.folder-button .folder-name {
+	padding: 0 65px 0 10px;
+	background-color: #FFFFFF
 }

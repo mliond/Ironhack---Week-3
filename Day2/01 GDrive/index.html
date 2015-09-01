@@ -6,6 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		<title>Google Drive</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="style.css">
@@ -28,7 +30,7 @@
 						<div class="input-group">
 							<input type="text" class="form-control" placeholder="Search Drive">
 							<span class="input-group-btn">
-								<button class="btn btn-primary" type="button">
+								<button class="search-icon btn btn-primary" type="button">
 								<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 								</button>
 							</span>
@@ -38,7 +40,7 @@
 					</div>
 					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 						<div class="user-options">
-							Markus
+							<span class="username">Markus</span>
 							<span class="glyphicon glyphicon-th"></span>
 							<span class="glyphicon glyphicon-phone-alt"></span>
 							<img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/1/005/01b/0ed/34daa15.jpg" alt="" class="img-circle userpic">
@@ -47,16 +49,28 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="second-nav">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-						<img src="https://lh6.ggpht.com/k7Z4J1IIXXJnC2NRnFfJNlkn7kZge4Zx-Yv5uqYf4222tx74wXDzW24OvOxlcpw0KcQ=w300" alt="" class="gdrive-logo">
-						Drive
+						<div class="gdrive-logo-box">
+							<img src="https://lh6.ggpht.com/k7Z4J1IIXXJnC2NRnFfJNlkn7kZge4Zx-Yv5uqYf4222tx74wXDzW24OvOxlcpw0KcQ=w300" alt="" class="gdrive-logo">
+							<span class="gdrive-logo">Drive</span>
+						</div>
 					</div>
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-						My Drive > Folder 1 > Folder 2
+						<div class="folder-structure-box">
+							My Drive > Folder 1 >
+							<div class="btn-group">
+								<button type="button" class="folder-two btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Folder 2 <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">Folder 1</a></li>
+									<li><a href="#">My Drive</a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 					<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
 					</div>
@@ -79,15 +93,14 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="main-content">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 						
 						<div class="sidebar">
-							<button type="button" class="btn btn-danger">New</button>
-							<ul class="nav nav-pills nav-stacked">
+							<button type="button" class="new-button btn btn-danger">New</button>
+							<ul class="sidebar-menu nav nav-pills nav-stacked">
 								<li role="presentation"><a href="#"><span class="glyphicon glyphicon-folder-open"></span> My Drive</a></li>
 								<li role="presentation"><a href="#"><span class="glyphicon glyphicon-user"></span>Shared with me</a></li>
 								<li role="presentation"><a href="#"><span class="glyphicon glyphicon-random"></span> Google Photos</a></li>
@@ -97,7 +110,7 @@
 							</ul>
 							<div class="empty-space">
 							</div>
-							<button type="button" class="btn btn-default">
+							<button type="button" class="get-drive-button btn btn-default">
 							<span class="glyphicon glyphicon-star" aria-hidden="true"></span> Get Drive for Mac
 							</button>
 							<hr>
@@ -105,16 +118,34 @@
 							<p><a href="#">Buy more storage</a></p>
 						</div>
 					</div>
-
 					<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
 						<div class="content">
-							<button type="button" class="btn btn-default btn-lg">
-							  <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> Folder 1
+							<button type="button" class="folder-button btn btn-default btn-lg">
+							<span class="folder-icon glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+							<span class="folder-name">Folder 1</span>
 							</button>
-
+							<button type="button" class="folder-button btn btn-default btn-lg">
+							<span class="folder-icon glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+							<span class="folder-name">Folder 2</span>
+							</button>
+							<button type="button" class="folder-button btn btn-default btn-lg">
+							<span class="folder-icon glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+							<span class="folder-name">Folder 3</span>
+							</button>
+							<button type="button" class="folder-button btn btn-default btn-lg">
+							<span class="folder-icon glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+							<span class="folder-name">Folder 4</span>
+							</button>
+							<button type="button" class="folder-button btn btn-default btn-lg">
+							<span class="folder-icon glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+							<span class="folder-name">Folder 5</span>
+							</button>
+							<button type="button" class="folder-button btn btn-default btn-lg">
+							<span class="folder-icon glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+							<span class="folder-name">Folder 6</span>
+							</button>
 						</div>
 					</div>
-					
 				</div>
 			</div>
 		</div>
