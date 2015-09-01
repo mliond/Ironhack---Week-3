@@ -1,0 +1,25 @@
+/* These are all p tags */
+p {
+	color: red;
+}
+
+/* This is a class. It addresses all p tags with the special class */
+p.special {
+	color: blue;
+}
+
+/* This class addresses all tags including the special class */
+.special {
+	color: blue;
+}
+
+/* Using IDs ist not recommended */
+#different {
+	color: yellow;
+}
+
+/* You can give tags multiple classes */
+p.different {
+	color: yellow;
+}
+

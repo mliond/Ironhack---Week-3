@@ -1,0 +1,66 @@
+html{
+	height: 100%;
+}
+
+body{
+	height: 100%;
+}
+
+.header{
+	height: 90px;
+	background-color: white;
+}
+
+.header h1 {
+	color: black;
+	font-style: normal
+}
+
+.header nav {
+	float: left;
+	list-style: none;
+  margin-top: 40px;
+  padding: 0;
+  color: #444;
+  font-weight: 400;
+}
+
+.picturebox{
+	background-color: black;
+	color: white;
+}
+
+img.grayscale{
+	height: 100%;
+	width: 100%;
+	filter: gray;
+	-webkit-filter: grayscale(100%);
+}
+
+.three-descriptions{
+	background-color: #ed564b;
+	border-top: 5px solid #f96b61;
+	border-bottom: 5px solid #f96b61;
+	color: white;
+	text-align: center;
+}
+
+.latest-stuff{
+ background-color: white;
+}
+
+.latest-stuff .img-responsive{
+	height: auto;
+	max-width: 100%;
+}
+
+.contact-info {
+	background-color: #3b3b3b;
+	border-top: 5px solid #ed564b;
+	color: #aaa;
+}
+
+.copyright{
+	background-color: #292929;
+	color: white;
+}

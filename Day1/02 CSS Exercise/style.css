@@ -1,0 +1,72 @@
+body {
+	margin: 0;
+	font-family: Helvetica;
+
+}
+
+a {
+	text-decoration: none;
+	color: rgba(28, 38, 177, 0.6);
+}
+
+.box {
+	border: 2px solid grey;
+	padding: 15px 20px;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+}
+
+nav {
+	display: flex;
+}
+
+nav a {
+	margin-right: 14px;
+}
+
+.menu-links {
+	flex-grow: 1;
+}
+
+.results-wrap {
+	display: flex;
+}
+
+.result {
+	width: 50%;
+}
+
+.main-result {
+	width: 50%;
+}
+
+button {
+	border: 0;
+	background-color: rgba(128, 128, 128, 0.36);
+	padding: 8px 10px;
+	border-radius: 3px;
+}
+
+.search-box input {
+	padding: 6px 8px;
+}
+
+.item {
+	margin-bottom: 30px;
+}
+
+.item a {
+	font-size: 18px;
+}
+
+.item .url {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.item .description {
+	font-size: 14px;
+}
