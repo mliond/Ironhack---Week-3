@@ -1,15 +1,28 @@
 arr = ["dead", "bygone", "landing", "cheaply", "assumed", "incorrectly", "attention", "agent"]
 arr2= ["January", "lacks", "caveats", "hazardous", "DOORS", "crying", "arrogantly", "climate", "proponent", "rebuttal"] 
 
-function change_arr(arr, direction) {
-	var new_arr
-	if (direction === "forward"){ 
-		new_arr = arr;
-	}	else if (direction === "backward") {
-		new_arr = arr.reverse();
+sentence = "dead, bygone, landing, cheaply, assumed, incorrectly, attention, agent"
+
+// function change_arr(arr, command) {
+function change_arr(sentence, command) {
+	// var command = command.split("-");
+	var sentence = sentence.split(" ");
+	if (command[1] === "backward") {
+		arr = arr.reverse();
 	}	
-	return new_arr;
+	if (command[0] === "even") {
+		arr = arr.filter(function(word, index) {
+			return index % 2 === 1
+		})
+	}
+	else if (command[0] === "odd") {
+		arr = arr.filter(function(word, index) {
+			return index % 2 === 0
+		})
+	}
+	return arr;
 } 
+
 
 
 function decode(arr) {
@@ -21,5 +34,8 @@ function decode(arr) {
 	return secretmessage;
 }
 
-console.log(decode(change_arr(arr, "backward")));
-console.log(decode(change_arr(arr2, "forward")));
+module.exports = decode;
+
+
+console.log(decode(change_arr(sentence, "all-forward")));
+// console.log(decode(change_arr(arr, "odd-forward")));
