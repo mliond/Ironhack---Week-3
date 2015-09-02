@@ -26,4 +26,3 @@ function giveObject(numbers) {
 }
 
 console.log(giveObject(numbers_split));
-// average(numbers) = 85
