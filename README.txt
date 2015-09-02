@@ -1,3 +1,3 @@
 Day 1: We learned about CSS, cloned Google layout (really basic), learned about Bootstrap, and finally cloned a layout called 'Revera' using Bootstrap and custom CSS. 
 Day 2: We spent a lot of time cloning the Google Drive layout. Mine looks pretty good. 
-Day 3: We started with Javascript. First, we learned about all loops etc, then built a function, which calculates several stats from an array of numbers.
+Day 3: We started with Javascript. Several small exercises to learn the basics. Afterwards we learned about callbacks and did a keynote terminal and a JSON reader called Game of Thrones Episodes.
