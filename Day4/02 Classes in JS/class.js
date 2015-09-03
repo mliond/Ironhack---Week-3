@@ -14,14 +14,22 @@ var Car = function (brand, speed) {
 
   this.brake = function (dec){
     current_speed -= dec;
+    if (current_speed <= 0) {
+      current_speed = 0;
+      console.log("You are standing still at " + current_speed + " km/h.")
+    };
   };
 
   this.driving = function() {
-    console.log("You're currently driving " + current_speed + " km/h.")
+    if (current_speed === 0){
+      console.log("You are standing still at " + current_speed + " km/h.")
+    } else {
+      console.log("You're currently driving " + current_speed + " km/h.")
+    };
   };
 };
 
 var car = new Car("Ferrari", 200);
-car.accelerate(300);
-car.brake(18);
+car.accelerate(210);
+car.brake(300);
 car.driving();
