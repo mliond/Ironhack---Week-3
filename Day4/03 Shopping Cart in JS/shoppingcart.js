@@ -11,27 +11,32 @@ shoppingCart.prototype.add_item = function (item) {
 };
 
 // This removes a specified item from the cart.
-shoppingCart.prototype.remove_item = function (item) {
-
-  this.cart = this.cart.filter(function(fruit, index) {
-    return fruit.nameof != item.nameof;
+shoppingCart.prototype.remove_item = function (item, number) {
+  var number_item = 0;
+  this.cart.forEach (function (item) {
+    if (item.nameof === item.nameof) {
+      number_item += 1;
+    };
   });
 
+  if (number < number_item) {
+    for (var i = 0; i < number; i ++) {
+      var index = this.cart.indexOf(item);
+      if (index > -1) {
+          this.cart.splice(index, 1);
+      };
+    };
+  } else {
+    this.cart = this.cart.filter(function(fruit, index) {
+      return fruit.nameof != item.nameof;
+    });
+  };
 
-  // if (number === undefined) {
-  //   number = 99;
-  // };
-
-  // for (var i = 0; i < number; i ++) {
-  //   var index = this.cart.indexOf(item);
-  //   if (index > -1) {
-  //       this.cart.splice(index, 1);
-  //   };
-  // }
-
+  console.log("You removed a couple of " + item.nameof + "s. Your cart now contains: ")
   console.log(this.cart);
 };
 
+// This adds the price of all items and continues to the discount function.
 shoppingCart.prototype.checkout = function () {
   this.total = this.cart.reduce (function (sum, item) {
     return sum + item.price}, 0);

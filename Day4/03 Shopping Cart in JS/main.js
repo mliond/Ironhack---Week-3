@@ -18,8 +18,8 @@ my_cart.add_item(orange);
 my_cart.add_item(orange);
 my_cart.add_item(orange);
 my_cart.add_item(watermelon);
+my_cart.remove_item(orange);
+my_cart.remove_item(apple, 1);
 
 my_cart.checkout();
 
-// my_cart.remove_item(apple, 1);
-my_cart.remove_item(orange);
