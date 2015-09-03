@@ -3,6 +3,7 @@ var read = require('read');
 var Game = function () {
   this.map = [];
   this.current_location = 0;
+  this.user_inventory = [];
 }
 
 Game.prototype.add_room = function (room) {
@@ -11,6 +12,9 @@ Game.prototype.add_room = function (room) {
 
 Game.prototype.describe_location = function (number) {
   console.log("You are in a " + this.map[number].name);
+  if (this.map[number].inventory != "") {
+    console.log("You can see a " + this.map[number].inventory + " laying in the dark");
+  }
 };
 
 Game.prototype.prompt_user = function () {
@@ -26,10 +30,28 @@ Game.prototype.evaluate_input = function (err, direction){
   console.log("chose: " + direction);
   direction = direction.toUpperCase();
   if (direction != "F") {
-    self.move_user(direction);
+    self.input_direction_or_inventory(direction);
     self.prompt_user();
   };
 };
+
+Game.prototype.input_direction_or_inventory = function (direction) {
+  if (direction.indexOf("PICK") > -1 || direction.indexOf("DROP")) {
+    this.inventory_action(direction);
+  } else {
+    this.move_user(direction);
+  };
+}
+
+Game.prototype.inventory_action = function(direction) {
+  if (direction.indexOf("PICK") > -1 && direction.indexOf(this.map[this.current_location].inventory.toUpperCase() > -1)) {
+    this.user_inventory.push(this.map[this.current_location].inventory);
+    this.map[this.current_location].inventory = "";
+    console.log("Your inventory is " + this.user_inventory);
+  } else if (direction.indexOf("DROP") > -1 && direction.indexOf(this.user_inventory > -1)) {
+    console.log("Drop this shit")
+  };
+}
 
 Game.prototype.move_user = function (direction) {
   switch(direction) {
