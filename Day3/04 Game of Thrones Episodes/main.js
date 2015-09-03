@@ -1,6 +1,4 @@
 var fs = require('fs');
-// var fileActions = require('./fileactions')
-var fileActionsRating = require('./fileactions_rating')
+var fileActions = require('./fileactions')
 
-// fs.readFile("./GoTEpisodes.json", 'utf8', fileActions);
-fs.readFile("./GoTEpisodes.json", 'utf8', fileActionsRating);
+fs.readFile("./GoTEpisodes.json", 'utf8', fileActions);
