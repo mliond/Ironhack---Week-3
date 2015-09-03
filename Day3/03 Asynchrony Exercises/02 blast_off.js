@@ -8,7 +8,6 @@ function blastOff(seconds) {
 			console.log("Boom");
 		}
 	}
-
 	countdown();
 }
 
