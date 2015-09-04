@@ -10,12 +10,19 @@ Game.prototype.add_question = function (question) {
   this.question_array.push(question);
 }
 
+// This returns a random number of bonus questions
+Game.prototype.get_random_number = function () {
+    var bonus_questions = Math.floor(this.question_array.length / 3);
+    var max = this.question_array.length + 1;
+    var min = this.question_array.length + 1 - bonus_questions;
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
 // This initiates the question and leads to bonus question
 Game.prototype.start_game = function () {
   this.show_player_score();
-
   if ((this.current_question + 1) % 3 === 0) {
-    var random_number = Math.floor(Math.random() * 10);
+    var random_number = this.get_random_number();
     this.ask_question(random_number);
     this.prompt_input(random_number);
   } else {
@@ -54,12 +61,11 @@ Game.prototype.exit_game = function (err, answer, question_number) {
 // This checks if the answer is correct or not (in uppercase)
 Game.prototype.evaluate_answer = function (answer, question_number) {
   if (answer.toUpperCase() === this.question_array[question_number].capital.toUpperCase()) {
-    this.current_question += 1;
-    if (question_number === this.current_question) {
-      this.player_score += 2;
-    } else {
-      this.player_score += 1;
+    if (!(question_number == this.current_question)) {
+      this.player_score += 1; // bonus point
     };
+    this.player_score += 1;
+    this.current_question += 1;
   } else {
     console.log("Wrong answer");
     console.log("Hint: The capital starts with " + this.question_array[question_number].capital[0] + "...");
