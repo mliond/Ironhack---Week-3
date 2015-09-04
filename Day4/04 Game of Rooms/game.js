@@ -30,13 +30,14 @@ Game.prototype.evaluate_input = function (err, direction){
   console.log("chose: " + direction);
   direction = direction.toUpperCase();
   if (direction != "F") {
+    // self.move_user(direction)
     self.input_direction_or_inventory(direction);
     self.prompt_user();
   };
 };
 
 Game.prototype.input_direction_or_inventory = function (direction) {
-  if (direction.indexOf("PICK") > -1 || direction.indexOf("DROP")) {
+  if (direction.indexOf("PICK") > -1 || direction.indexOf("DROP") > -1) {
     this.inventory_action(direction);
   } else {
     this.move_user(direction);
@@ -49,7 +50,15 @@ Game.prototype.inventory_action = function(direction) {
     this.map[this.current_location].inventory = "";
     console.log("Your inventory is " + this.user_inventory);
   } else if (direction.indexOf("DROP") > -1 && direction.indexOf(this.user_inventory > -1)) {
-    console.log("Drop this shit")
+    direction = direction.toLowerCase().replace("drop ", "");
+    console.log(direction);
+    var index = this.user_inventory.indexOf(direction);
+    if (index > -1) {
+      this.user_inventory.splice(index, 1);
+    };
+    console.log("Dropped the " + direction);
+    console.log("Your inventory is " + this.user_inventory);
+    this.map[this.current_location].inventory = direction;
   };
 }
 
