@@ -46,3 +46,43 @@ body {
   width: 100%;
 }
 
+.twitter-stats {
+  display: flex;
+  align-items: center;
+}
+
+.main-content .big-avatar {
+  width: 200px;
+  height: 200px;
+  margin-top: -85px;
+}
+
+.main-content img.big-avatar{
+  height: 100%;
+  width: 100%;
+  border: 5px solid white;
+}
+
+.main-content .sidebar {
+  margin-top: -85px;
+}
+
+.main-content .picture-thumbs img {
+  height: 83px;
+  width: 83px;
+  padding: 2px;
+}
+
+.main-content .panel-body img.avatar {
+  height: 48px;
+  width: 48px;
+}
+
+.main-content .panel-body img.tweet-pic {
+  width: 465px;
+}
+
+.main-content .panel-body .media-left img.other-accounts {
+  width: 36px;
+  height: 36px;
+}
