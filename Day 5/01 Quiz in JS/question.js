@@ -1,5 +1,5 @@
-var Question = function (id, country, capital) {
-  this.id = id;
+var Question = function (number, country, capital) {
+  this.number = number;
   this.country = country;
   this.capital = capital;
 }

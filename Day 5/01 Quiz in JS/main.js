@@ -1,19 +1,23 @@
 var Question = require ('./question')
 var Game = require ('./game')
 
-var question1 = new Question (1, "Netherlands", "Amsterdam");
-var question2 = new Question (2, "Andorra", "Andorra la Vella");
-var question3 = new Question (3, "Greece", "Athens");
-var question4 = new Question (4, "Serbia", "Belgrade");
-var question5 = new Question (5, "Germany", "Berlin");
-var question6 = new Question (6, "Switzerland", "Bern");
-var question7 = new Question (7, "Slovakia", "Bratislava");
-var question8 = new Question (8, "Belgium", "Brussels");
-var question9 = new Question (9, "Romania", "Bucharest");
-var question10 = new Question (10, "Hungary", "Budapest");
-
 var game = new Game();
+
+game.add_question(new Question (1, "Netherlands", "Amsterdam"));
+game.add_question(new Question (2, "Hungary", "Budapest"));
+game.add_question(new Question (3, "Greece", "Athens"));
+game.add_question(new Question (4, "Serbia", "Belgrade"));
+game.add_question(new Question (5, "Germany", "Berlin"));
+game.add_question(new Question (6, "Switzerland", "Bern"));
+game.add_question(new Question (7, "Slovakia", "Bratislava"));
+game.add_question(new Question (8, "Belgium", "Brussels"));
+game.add_question(new Question (9, "Romania", "Bucharest"));
+game.add_question(new Question (10, "Andorra", "Andorra la Vella"));
+
+
 game.start_game();
+
+
 
 /*
 var question11 = new Question (11, "Moldova", "Chisinau");
