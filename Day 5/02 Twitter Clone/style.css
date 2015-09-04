@@ -1,0 +1,48 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/*div {
+  border: 1px solid black;
+}
+*/
+.new-to-twitter {
+  height: 88px;
+  background-color: #55ACEE;
+  color: white;
+  display: flex;
+  align-items: center;
+
+}
+
+.sign-up-button {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.top-nav {
+  height: 46px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.top-nav img{
+  height: 23px;
+}
+
+.top-picture {
+  height: 320px;
+}
+
+.top-picture img {
+  height: 100%;
+  width: 100%;
+}
+
