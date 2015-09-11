@@ -1,4 +1,4 @@
-t var Car = function (brand, max_speed) {
+var Car = function (brand, max_speed) {
   // initialize
   this.brand = brand;
   this.max_speed = max_speed;
